@@ -1,180 +1,73 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Payment — FoodHungama</title>
+  <link rel="stylesheet" href="Styles/general.css" />
+  <link rel="stylesheet" href="Styles/payment.css" />
+</head>
+<body>
+  <header class="home-nav js-payment-nav">
+    <div class="home-nav-profile">
+      <img src="Images/blue-profile-icon-free-png.webp" alt="Profile" class="js-payment-profile" />
+    </div>
+    <div class="home-nav-title">
+      <h1 class="js-payment-title">FoodHungama</h1>
+    </div>
+    <div class="home-nav-fav-wallet">
+      <a href="payment.html" class="payment-nav-cart-link" aria-current="page">Checkout</a>
+    </div>
+  </header>
 
-    <title>Review Payment</title>
-    <link rel="stylesheet" href="Styles/payment.css">
-    <link rel="stylesheet" href="Styles/general.css">
-    <link rel="stylesheet" href="Styles/extra.css">
-    <link rel="icon" href="">
+  <main class="payment-main">
+    <div class="payment-container">
+      <h1 class="payment-page-title">Review &amp; Pay</h1>
 
-  </head>
-
-  <body>
-
-    <header class="home-nav js-home-nav">
-      <div class="home-nav-profile">
-        <img src="Images/blue-profile-icon-free-png.webp" class="js-home-profile">
-      </div>
-
-      <div class="home-nav-title">
-        <h1 class="js-home-title">FoodHungama</h1>
-      </div>
-
-      <div class="home-nav-fav-wallet">
-        <div class="home-nav-order-history">
-          <img src="https://thumbs.dreamstime.com/b/transaction-history-icon-isolated-white-background-your-web-mobile-app-design-133862670.jpg" class="js-home-order-history" alt="Order History">
+      <section class="payment-grid">
+        <!-- Order summary -->
+        <div class="pay-box payment-summary">
+          <h2>Order Summary</h2>
+          <div id="order-list" class="order-list"></div>
+          <p class="pay-line pay-subtotal">Subtotal: <strong id="subtotal">0</strong> PKR</p>
+          <div class="coupon-section">
+            <input id="coupon-input" class="pay-input" type="text" placeholder="Coupon code" />
+            <button type="button" id="apply-coupon" class="btn btn-coupon">Apply</button>
+          </div>
+          <p id="discount-text" class="discount-text" aria-live="polite"></p>
+          <p class="pay-line pay-grand">Grand Total: <strong id="grand-total">0</strong> PKR</p>
         </div>
-        <img src="Images/Heart-icon.png" class="js-home-favourite">
-        <img src="Images/Cart-icon1.jpg" class="js-home-cart">
-      </div>
-    </header>
 
-    <section class="All-carts js-All-carts">
+        <!-- Delivery info -->
+        <div class="pay-box">
+          <h2>Delivery Info</h2>
+          <label for="fullname">Full Name</label>
+          <input id="fullname" class="pay-input" type="text" placeholder="Your name" />
+          <label for="phone">Phone</label>
+          <input id="phone" class="pay-input" type="tel" placeholder="03XX XXXXXXX" />
+          <label for="address">Address</label>
+          <textarea id="address" class="pay-input pay-textarea" rows="3" placeholder="Street, city, area"></textarea>
+        </div>
 
-      <div class="All-carts-1">
-        <h1>All carts</h1>
-        <p class="js-cart-cross">&#x274c;</p>
-      </div>
-
-      <section class="All-carts-2 js-All-carts-2">
+        <!-- Payment method -->
+        <div class="pay-box">
+          <h2>Payment Method</h2>
+          <label class="pay-radio">
+            <input type="radio" name="method" value="cod" checked /> Cash on Delivery
+          </label>
+          <label class="pay-radio">
+            <input type="radio" name="method" value="card" /> Card (demo)
+          </label>
+        </div>
       </section>
 
-      <div class="Empty-cart js-Empty-cart">
-        <h1>Empty Cart</h1>
+      <div class="payment-actions">
+        <button type="button" id="place-order" class="pay-btn">Place Order</button>
+        <a href="home.html" class="pay-back">← Back to Home</a>
       </div>
+    </div>
+  </main>
 
-    </section>
-
-    <section class="payment-review-main">
-      <div class="payment-review-main-1">
-        <h1 class="Review">Review and place your order</h1>
-        <div class="payment-review-main-1-Address">
-          <!-- <div class="payment-review-main-1-Address-1">
-            <h1>Delivery address</h1>
-            <p>View Saved Addresses</p>
-          </div> -->
-          <!-- <div id="map"></div> -->
-          <!--<iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.0!2d67.0011!3d24.8607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDUxJzM4LjUiTiA2N8KwMDAnMDQuMCJF!5e0!3m2!1sen!2s!4v1700000000000" 
-              allowfullscreen="" 
-              loading="lazy">
-          </iframe>
-          <div class="payment-review-main-1-Address-2">
-            <div class="payment-loca">
-              <img class="location-src" src="https://static.vecteezy.com/system/resources/previews/000/599/083/original/location-icon-vector.jpg">
-              <div class="payment-addr">
-                <p class="payment-addr-1">Service Road W</p>
-                <p class="payment-addr-2">Karachi</p>
-              </div>
-            </div>
-            <p>Edit</p>
-          </div>
-          <h1 class="Missing">We're missing your street</h1>
-          <input placeholder="Street" class="addr-input-1">
-          <input placeholder="Floor" class="addr-input-2">
-          <input placeholder="Note to rider - e.g. building, landmark" class="addr-input-3">
-          <button class="save-button">Save and continue</button>-->
-
-          <!-- <h1>Saved Addresses</h1>
-          <div class="">
-
-          </div> -->
-
-          <div class="payment-review-main-1-Address">
-            <h1 class="Saved">Saved Addresses</h1>
-            <div class="js-saved-addresses"></div>
-
-            <!-- Google Map container -->
-            <div id="map"></div>
-
-            <h1 class="Missing">Add a new address</h1>
-            <input placeholder="Street" class="addr-input-1 js-street">
-            <input placeholder="Floor" class="addr-input-2 js-floor">
-            <input placeholder="Note to rider" class="addr-input-3 js-note">
-            <button class="save-button js-save-address">Save and continue</button>
-          </div>
-
-        </div>
-
-        <div class="payment-review-main-1-delivery">
-          <h1>Delivery options</h1>
-          <div class="payment-review-main-1-delivery-1">
-            <div class="radio">
-              <div></div>
-            </div>
-            <p class="standard">Standard</p>
-            <p class="min">15 - 30 mins</p>
-          </div>
-        </div>
-
-        <div class="payment-review-main-1-detail">
-          <h1>Personal details</h1>
-          <div class="payment-review-main-1-detail-1 js-payment-review-main-1-detail-1">
-          </div>
-        </div>
-        
-        <div class="payment-review-main-1-payment">
-          <h1>Payment</h1>
-          <div class="payment-review-main-1-payment-1">
-            <div class="radio">
-              <div></div>
-            </div>
-            <img src="https://i.fbcd.co/products/original/7af92f1e344aef940f0eab6ee813d41ba629eb037e18b878b08ddb1909310dbd.jpg">
-            <p>Cash on Delivery</p>
-          </div>
-          <div class="Voucher">
-            <img src="https://static.vecteezy.com/system/resources/previews/002/191/986/non_2x/discount-voucher-outline-icon-thin-line-black-discount-voucher-icon-vector.jpg">
-            <p>Apply a voucher</p>
-          </div>
-          <input placeholder="Enter voucher code">
-        </div>
-
-        <button class="Place-Order">Place Order</button>
-      </div>
-      
-      <div class="payment-review-main-2">
-        <h1 class="main-2-head">Your orders from</h1>
-        <p class="main-2-p js-main-2-p"></p>
-        <div class="main-2-div">
-          <div class="main-2-div-1 js-main-2-div-1">
-          </div>
-
-          <div class="main-2-div-2">
-            <div>
-              <p>Subtotal</p>
-              <p>Rs. <span class="js-subtotal"></span></p>
-            </div>
-
-            <div>
-              <p>Standard delivery</p>
-              <p>Rs. 0</p>
-            </div>
-
-            <div>
-              <p>Service fee</p>
-              <p>Rs. 14.99</p>
-            </div>
-
-            <div>
-              <p>VAT</p>
-              <p>Rs. 224.25</p>
-            </div>
-
-            <div class="main-2-Total">
-              <h1>Total</h1>
-              <h1>Rs. <span class="js-Total"></span></h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <script async
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script>
-    <script src="Scripts/general.js" type="module"></script>
-    <script src="Scripts/payment.js" type="module"></script>
-    <script src="Scripts/er.js" type="module"></script>
-  </body>
+  <script type="module" src="Scripts/payment.js"></script>
+</body>
 </html>
