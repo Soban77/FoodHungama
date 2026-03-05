@@ -4,7 +4,6 @@
     <title>Food</title>
     <link rel="stylesheet" href="Styles/food.css">
     <link rel="stylesheet" href="Styles/general.css">
-    <link rel="stylesheet" href="Styles/extra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="">
   </head>
@@ -20,9 +19,6 @@
       </div>
 
       <div class="home-nav-fav-wallet">
-        <div class="home-nav-order-history">
-          <img src="https://thumbs.dreamstime.com/b/transaction-history-icon-isolated-white-background-your-web-mobile-app-design-133862670.jpg" class="js-home-order-history" alt="Order History">
-        </div>
         <img src="Images/Heart-icon.png" class="js-home-favourite">
         <img src="Images/Cart-icon1.jpg" class="js-home-cart">
       </div>
@@ -45,9 +41,8 @@
 
         <div class="Review-page-div1-1">
           <h1 class="js-Review-rating">4.9</h1>
-          <img src="Images/ratings/rating-45.png" class="js-Review-img-r">
-          <p class="Review-count js-Review-count">0 Reviews</p>
-          <p>All Ratings (<span>4000</span>)</p>
+          <img src="Images/ratings/rating-45.png" alt="" class="js-Review-img-r" onerror="this.style.display='none'">
+          <p>All Ratings (<span class="js-Review-count">0</span>)</p>
         </div>
 
         <div class="Review-page-div1-2">
@@ -95,26 +90,26 @@
         </div>
       </div>
 
-      <div class="Review-page-div2">
-        <div class="Review-page-div2-1">
-          <h1>Zafar</h1>
-
-          <div>
-            <img src="Images/ratings/rating-50.png">
-            <p>5 days ago</p>
-          </div>
-
-          <p>Best halwa puri breakfast of Islamabad</p>
+      <div class="Review-page-div2 js-Review-list-wrap">
+        <div class="Review-form-wrap js-Review-form-wrap">
+          <h3>Write a review</h3>
+          <form class="Review-form js-Review-form">
+            <label>Rating</label>
+            <select class="Review-form-rating js-Review-form-rating" required>
+              <option value="5">5 – Excellent</option>
+              <option value="4">4 – Good</option>
+              <option value="3">3 – Okay</option>
+              <option value="2">2 – Poor</option>
+              <option value="1">1 – Bad</option>
+            </select>
+            <label>Comment</label>
+            <textarea class="Review-form-comment js-Review-form-comment" rows="3" placeholder="Share your experience..."></textarea>
+            <button type="submit" class="Review-form-submit">Submit review</button>
+          </form>
         </div>
-      </div>
-
-      <div class="Review-form">
-        <h2>Leave a Review</h2>
-        <div class="stars js-stars">
-          ★★★★★
+        <div class="Review-list js-Review-list">
+          <!-- filled by JS -->
         </div>
-        <textarea class="js-review-text" placeholder="Write your review..."></textarea>
-        <button class="js-submit-review">Submit Review</button>
       </div>
     </section>
 
@@ -179,6 +174,5 @@
     </section>
 
     <script src="Scripts/food.js" type="module"></script>
-    <script src="Scripts/er.js" type="module"></script>
   </body>
 </html>
