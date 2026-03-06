@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order Confirmed — FoodHungama</title>
+  <link rel="stylesheet" href="Styles/general.css" />
+  <link rel="stylesheet" href="Styles/payment.css" />
+  <link rel="stylesheet" href="Styles/order-confirm.css" />
+</head>
+<body>
+  <header class="home-nav">
+    <div class="home-nav-profile">
+      <img src="Images/blue-profile-icon-free-png.webp" alt="Profile" class="js-confirm-profile" />
+    </div>
+    <div class="home-nav-title">
+      <h1 class="js-confirm-title">FoodHungama</h1>
+    </div>
+    <div class="home-nav-fav-wallet">
+      <a href="home.html" class="payment-nav-cart-link">Home</a>
+    </div>
+  </header>
+
+  <main class="payment-main confirm-main">
+    <div class="payment-container confirm-container">
+      <div id="confirm-content" class="confirm-content">
+        <p class="loading-payment">Loading order…</p>
+      </div>
+      <div class="confirm-actions">
+        <a href="home.html" class="pay-btn confirm-btn">Continue to Home</a>
+        <a href="profile.html" class="pay-back">View order history in Profile</a>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="Scripts/order-confirm.js"></script>
+</body>
+</html>

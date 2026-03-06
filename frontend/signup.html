@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Styles/signup.css">
+    <link rel="icon" href="">
+  </head>
+
+  <body>
+
+    <div class="sign-container">
+
+      <h1>Sign Up</h1>
+      <p>Email address</p>
+      <input class="sign-container-email js-email" type="email" required>
+      <p>Username</p>
+      <input class="sign-container-normal js-username"  type="text" required>
+      <p>Password</p>
+      <input class="sign-container-normal js-password"  type="password" required>
+      <p>Phone number</p>
+      <input class="sign-container-normal js-phone" type="tel" placeholder="+92-300-1234567" required>
+      <p>Address</p>
+      <input class="sign-container-address js-address" type="text" required>
+
+      <div class="signin-buttons">
+        <button class="signin-signup js-signup-signup">Sign up</button>
+      </div>
+
+      <div class="sign-login-a">
+        <p>already account? <a href="index.html">Login</a></p>
+      </div>
+
+      <div class="no-account js-empty-account">
+        <h1>Some details are missing</h1>
+      </div>
+
+    </div>
+
+    <script src="Scripts/signup.js" type="module"></script>
+  </body>
+</html>

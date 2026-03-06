@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.Confirmation {
+  background-color: rgba(76, 30, 30, 0.5);
+  width: 300px;
+  height: 100px;
+
+  position: absolute;
+  right: 550px;
+  top: 300px;
+  border-radius: 10px;
+
+  display: none;
+}
+
+.Confirmation section {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+.Confirmation section img {
+  width: 20px;
+  height: 20px; 
+
+  cursor: pointer;
+}
+
+.Confirmation p {
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
+.Confirmation div {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.Confirmation div button {
+  width: 70px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(81, 81, 222);
+  cursor: pointer;
+}
+
+.Confirmation div button:hover {
+  opacity: 0.7;
+}
+
+.Confirmation-button1 {
+  margin-right: 5px;
+}
+
+.Confirmation-button2 {
+  margin-left: 5px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 5px;
+}
+
+.main section {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  align-self: flex-end;
+
+  cursor: pointer;
+}
+
+.main section:hover {
+  background-color: rgba(238, 231, 231,0.5);
+  border-radius: 10px;
+}
+
+.main section img {
+  width: 25px;
+  height: 25px;
+}
+
+.main div {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  height: 50px;
+  cursor: pointer;
+}
+
+.main div:hover {
+  background-color: rgba(238, 231, 231,0.5);
+  border-radius: 10px;
+}
+
+.main div img {
+  width: 25px;
+  height: 25px;
+}
+
+.main div p {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.logout {
+  margin-top: 50px;
+}

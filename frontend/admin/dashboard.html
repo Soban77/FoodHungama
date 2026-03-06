@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard — FoodHungama</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Admin Dashboard</h1>
+      <button id="logout" class="btn ghost">Logout</button>
+    </div>
+
+    <div class="card">
+      <nav class="nav">
+        <a href="restaurants.html">Restaurants</a>
+        <a href="items.html">Items</a>
+        <a href="orders.html">Orders</a>
+        <a href="users.html">Users</a>
+        <a href="coupons.html">Coupons</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="deliveries.html">Deliveries</a>
+      </nav>
+
+      <section class="quick-actions">
+        <h3>Quick actions</h3>
+        <div class="flex">
+          <button id="btn-refresh" class="btn primary">Check server</button>
+          <span id="ping" class="small"></span>
+        </div>
+      </section>
+
+      <div class="footer">Use the links above to manage resources. All actions require admin authentication.</div>
+    </div>
+  </div>
+
+  <script type="module" src="admin-dashboard.js"></script>
+</body>
+</html>

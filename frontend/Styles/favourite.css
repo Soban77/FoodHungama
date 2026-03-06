@@ -1,0 +1,159 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.home-nav {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  background-color: rgb(246, 231, 235);
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.home-nav div img {
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.home-nav-profile {
+  margin-left: 5px;
+}
+
+.home-nav-title h1 {
+  cursor: pointer;
+}
+
+.home-nav-title h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.home-nav-fav-wallet {
+  margin-right: 10px;
+
+  display: flex;
+  flex-direction: row;
+
+  width: 90px;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.favourite-main {
+  margin-top: 120px;
+  margin-left: 20px;
+}
+
+.favourite-main h1 {
+  font-weight: bolder;
+}
+
+.home-main-restaurants {
+  display: grid;
+  flex-direction: column;
+
+  justify-content: center;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.home-main-restaurants-part1:hover {
+  background-color: rgb(145, 162, 168);
+  border-radius: 5px;
+}
+
+.home-main-restaurants-part1 {
+  margin-top: 15px;
+
+}
+
+.home-main-restaurants-part1 img {
+  width: 100%;
+  border-radius: 15px;
+  height: 300px;
+
+  cursor: pointer;
+}
+
+.home-main-restaurants-part2 {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+
+  height: 15px;
+  margin-top: 10px;
+}
+
+.home-main-restaurants-part2-1 {
+  font-weight: bold;
+}
+
+.home-main-restaurants-part2-2 {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.home-main-restaurants-part2-2 img {
+  width: 20px;
+  height: 20px;
+}
+
+.home-main-restaurants-part3 {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  height: 25px;
+  margin-top: 10px;
+}
+
+.home-main-restaurants-part3 img {
+  width: 20px;
+  height: 20px;
+}
+
+.home-main-restaurants-part3 p {
+  opacity: 0.7;
+  margin-left: 5px;
+}
+
+.No-favourite-container {
+  display: none;
+  flex-direction: column;
+
+  align-items: center;
+  margin-top: 20px;
+}
+
+.No-favourite-container img {
+  width: 160px;
+  height: 160px;
+}
+
+.No-favourite-container div {
+  font-size: 30px;
+  font-weight: bold;
+  width: 500px;
+  border: 1px solid rgba(2,2,2,0.6);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

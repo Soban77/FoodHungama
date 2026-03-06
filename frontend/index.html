@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign in</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="Styles/index.css">
+  </head>
+  <body>
+    <div class="sign-container">
+
+      <h1>Login</h1>
+      <p>Username</p>
+      <input type="text" placeholder="Enter your Username" required class="js-sign-container-username">
+      <p>Password</p>
+      <input type="password" placeholder="Enter your password" required class="js-sign-container-password">
+
+      <div class="signin-buttons">
+        <button class="signin-login js-signin-login">Login</button>
+        <button class="signin-signup js-signin-signup">Sign up</button>
+      </div>
+
+
+      <div class="no-account js-no-account">
+        <h1>Account does not exist</h1>
+      </div>
+
+      <div class="no-account js-empty-account">
+        <h1>Some details are missing</h1>
+      </div>
+
+      <div class="no-account js-invalid-account">
+        <h1>No such id exists</h1>
+      </div>
+
+    </div>
+
+    <script src="Scripts/index.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.home-nav {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  background-color: rgb(246, 231, 235);
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.home-nav div img {
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.home-nav-profile {
+  margin-left: 5px;
+}
+
+.home-nav-title h1 {
+  cursor: pointer;
+}
+
+.home-nav-title h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.home-nav-fav-wallet {
+  margin-right: 10px;
+
+  display: flex;
+  flex-direction: row;
+
+  width: 90px;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-main {
+  margin-top: 150px;
+}
+
+.profile-main-1 {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 100px;
+}
+
+.profile-main-1-2 {
+  margin-top: 40px;
+}
+
+.profile-main-1-1 h1 {
+  font-size: 22px;
+}
+
+.profile-main-1-1 p {
+  font-size: 12px;
+}
+
+.profile-main-1-1 div, .profile-main-1-2 div {
+  border-radius: 8px;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(1,1,1,0.3);
+
+  height: 40px;
+  width: 800px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.profile-main-1-2 p {
+  font-size: 12px;
+}
+
+.profile-main-1-2 h2 {
+  font-size: 22px;
+}
+
+.profile-main-1-1 div span, .profile-main-1-2 div span {
+  margin-left: 10px;
+}
